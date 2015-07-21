@@ -8,10 +8,8 @@ setup(
     install_requires=[''],
     classifiers=['Development Status :: 3 - Alpha'],
     ext_modules=[
-        Extension('src',
+        Extension('asdf',
                   ['src/foo.cpp'],
-                  include_dirs=['src'],
-                  library_dirs=['/'],
                  )
      ],
 )
