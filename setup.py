@@ -12,7 +12,7 @@ setup(
     ext_modules=[
         # Extension('py_ctypes_foo_module', ['py_ctypes_foo/foo.cpp']),
         Extension('cos_module', ['py_c_interface_cos/cos_module.c']),
-        # Extension('py_c_swig_cos', ['py_c_swig_cos/cos_wrap.c', 'py_c_swig_cos/cos.c']),
+        Extension('_cswig_cos', ['cswig_cos/cos_wrap.c', 'cswig_cos/cos.c']),
      ],
     packages = packages,
     entry_points={'console_scripts': ['miniextension_test=scripts.miniextension_test.main']}
