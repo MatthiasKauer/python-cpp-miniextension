@@ -15,5 +15,5 @@ setup(
         Extension('_cswig_cos', ['cswig_cos/cos_wrap.c', 'cswig_cos/cos.c']),
      ],
     packages = packages,
-    entry_points={'console_scripts': ['miniextension_test=scripts.miniextension_test.main']}
+    entry_points={'console_scripts': ['miniextension_test=script.miniextension_test:main']}
 )
