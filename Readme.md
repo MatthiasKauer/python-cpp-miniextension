@@ -5,6 +5,12 @@ If you have a compiler installed that your Python environment knows about, the f
 python setup.py build_ext
 ```
 
+The script currently works only after installation (or so I believe)
+```
+python setup.py install
+miniextension_test
+```
+
 ###Windows
 I'm using Anaconda on Windows. Install mingw into an environment of your choice.
 Then install mingw and compile with this compiler specifically
