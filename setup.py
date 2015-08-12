@@ -11,4 +11,5 @@ setup(
         Extension('py_c_interface_cos_module', ['py_c_interface_cos/cos_module.c']),
         Extension('py_c_swig_cos', ['py_c_swig_cos/cos_wrap.c', 'py_c_swig_cos/cos.c'])
      ],
+    entry_points={'console_scripts': ['scripts.miniextension_test.main']}
 )
