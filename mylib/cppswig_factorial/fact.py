@@ -69,6 +69,10 @@ except AttributeError:
     _newclass = 0
 
 
+
+def factorial(*args):
+  return _fact.factorial(*args)
+factorial = _fact.factorial
 # This file is compatible with both classic and new-style classes.
 
 
