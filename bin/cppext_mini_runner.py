@@ -5,6 +5,6 @@ try:
 except ImportError:
     sys.exit(-1)
 
-from transferdyn.scripts.cppext_mini import mini_runner
+from mylib.script.miniextension_test import main
 if __name__ == '__main__':
-    mini_runner()
+    main()
