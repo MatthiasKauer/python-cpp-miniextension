@@ -2,5 +2,6 @@
 build/**
 *.pyd
 *.pyc
+*.so
 dist/**
 *egg-info/**
