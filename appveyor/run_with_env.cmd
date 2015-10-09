@@ -44,28 +44,8 @@ IF "%PYTHON_VERSION:~3,1%" == "." (
     SET MINOR_PYTHON_VERSION=%PYTHON_VERSION:~2,2%
 )
 
-:: Based on the Python version, determine what SDK version to use, and whether
-:: to set the SDK for 64-bit.
-IF %MAJOR_PYTHON_VERSION% == 2 (
-    SET WINDOWS_SDK_VERSION="v7.1"
-    SET SET_SDK_64=Y
-) ELSE (
-    IF %MAJOR_PYTHON_VERSION% == 3 (
-        SET WINDOWS_SDK_VERSION="v7.1"
-        IF %MINOR_PYTHON_VERSION% LEQ 4 (
-            SET SET_SDK_64=Y
-        ) ELSE (
-            SET SET_SDK_64=N
-            IF EXIST "%WIN_WDK%" (
-                :: See: https://connect.microsoft.com/VisualStudio/feedback/details/1610302/
-                REN "%WIN_WDK%" 0wdf
-            )
-        )
-    ) ELSE (
-        ECHO Unsupported Python version: "%MAJOR_PYTHON_VERSION%"
-        EXIT 1
-    )
-)
+SET WINDOWS_SDK_VERSION="v7.1"
+SET SET_SDK_64=Y
 
 ECHO Configuring Windows SDK %WINDOWS_SDK_VERSION% for Python %MAJOR_PYTHON_VERSION% on a 64 bit architecture
 SET DISTUTILS_USE_SDK=1
