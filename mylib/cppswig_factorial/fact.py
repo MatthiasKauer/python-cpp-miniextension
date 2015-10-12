@@ -81,6 +81,7 @@ class Factorial(_object):
         except: self.this = this
     def fact(self, *args): return _fact.Factorial_fact(self, *args)
     def lambda_fact(self, *args): return _fact.Factorial_lambda_fact(self, *args)
+    def ptr_fact(self, *args): return _fact.Factorial_ptr_fact(self, *args)
     __swig_destroy__ = _fact.delete_Factorial
     __del__ = lambda self : None;
 Factorial_swigregister = _fact.Factorial_swigregister

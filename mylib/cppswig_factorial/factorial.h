@@ -3,6 +3,7 @@
 #include <functional>
 #include <numeric>
 #include <iostream>
+#include <memory>
 
 //testing C++11 features from gcc list https://gcc.gnu.org/projects/cxx0x.html
 
@@ -26,7 +27,7 @@ class Factorial {
      int64_t fact(int64_t n) {
          auto x = _first_val;
 
-         for (auto i=_first_val+1; i < n ; ++i) {
+         for (auto i=_first_val+1; i <= n ; ++i) {
              x *= i;
          }
 
@@ -46,6 +47,12 @@ class Factorial {
          auto mult_lambda = [](int64_t l, int64_t r) {return l * r;};
          int64_t prod2 = std::accumulate(v.begin(), v.end(), 1, mult_lambda);
          return prod2;
+     }
+
+     void ptr_fact(std::shared_ptr<int64_t> pn){
+         auto n = *pn;
+         
+         *pn = this->fact(n);
      }
 };
 
