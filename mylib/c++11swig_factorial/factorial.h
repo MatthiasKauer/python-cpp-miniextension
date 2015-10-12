@@ -5,7 +5,9 @@
 #include <iostream>
 #include <memory>
 
-//testing C++11 features from gcc list https://gcc.gnu.org/projects/cxx0x.html
+// testing C++11 features from gcc list https://gcc.gnu.org/projects/cxx0x.html
+// these will only work from Python 3.5 onwards, I suppose:
+// https://ci.appveyor.com/project/MatthiasKauer/python-cpp-miniextension/build/ionelmc-appveyor-20
 
 /* most important for me: 
  * auto (done)
@@ -14,7 +16,6 @@
  * initializer lists (done)
  * shared & unique_ptr
 */
-
 
 
 class Factorial {
