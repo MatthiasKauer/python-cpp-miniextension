@@ -69,10 +69,23 @@ except AttributeError:
     _newclass = 0
 
 
+class Factorial(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Factorial, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Factorial, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _fact.new_Factorial()
+        try: self.this.append(this)
+        except: self.this = this
+    def fact(self, *args): return _fact.Factorial_fact(self, *args)
+    def lambda_fact(self, *args): return _fact.Factorial_lambda_fact(self, *args)
+    __swig_destroy__ = _fact.delete_Factorial
+    __del__ = lambda self : None;
+Factorial_swigregister = _fact.Factorial_swigregister
+Factorial_swigregister(Factorial)
 
-def factorial(*args):
-  return _fact.factorial(*args)
-factorial = _fact.factorial
 # This file is compatible with both classic and new-style classes.
 
 
