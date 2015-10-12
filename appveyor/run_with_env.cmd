@@ -47,7 +47,7 @@ IF "%PYTHON_VERSION:~3,1%" == "." (
 :: Based on the Python version, determine what SDK version to use, and whether
 :: to set the SDK for 64-bit.
 IF %MAJOR_PYTHON_VERSION% == 2 (
-    SET WINDOWS_SDK_VERSION="v7.1"
+    SET WINDOWS_SDK_VERSION="v7.0"
     SET SET_SDK_64=Y
 ) ELSE (
     IF %MAJOR_PYTHON_VERSION% == 3 (
@@ -67,6 +67,7 @@ IF %MAJOR_PYTHON_VERSION% == 2 (
     )
 )
 
+IF %PYTHON_ARCH% == 64 (
     IF %SET_SDK_64% == Y (
         ECHO Configuring Windows SDK %WINDOWS_SDK_VERSION% for Python %MAJOR_PYTHON_VERSION% on a 64 bit architecture
         SET DISTUTILS_USE_SDK=1
@@ -80,4 +81,8 @@ IF %MAJOR_PYTHON_VERSION% == 2 (
         ECHO Executing: %COMMAND_TO_RUN%
         call %COMMAND_TO_RUN% || EXIT 1
     )
+) ELSE (
+    ECHO Using default MSVC build environment for 32 bit architecture
+    ECHO Executing: %COMMAND_TO_RUN%
+    call %COMMAND_TO_RUN% || EXIT 1
 )
