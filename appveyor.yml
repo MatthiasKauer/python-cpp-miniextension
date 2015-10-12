@@ -4,7 +4,7 @@ cache:
   - '%LOCALAPPDATA%\pip\Cache'
 environment:
   global:
-    WITH_COMPILER: 'cmd /E:ON /V:ON /C .\ci\appveyor-with-compiler.cmd'
+    WITH_COMPILER: 'cmd /E:ON /V:ON /C .\appveyor\appveyor-with-compiler.cmd'
   matrix:
     - TOXENV: check
       PYTHON_HOME: C:\Python27
