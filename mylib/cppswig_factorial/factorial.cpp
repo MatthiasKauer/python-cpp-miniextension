@@ -16,7 +16,7 @@ class Factorial {
      int32_t _first_val;
 
  public:
-    Factorial() : _first_val(1);
+    Factorial() : _first_val(1) {}
 
     int64_t fact(int64_t n) {
         auto x = _first_val;
@@ -27,12 +27,14 @@ class Factorial {
 
         return x;
     }
+};
+
 
 int main() {
     using std::cout;
     using std::endl;
 
-    f = Factorial();
+    auto f = Factorial();
     cout << f.fact(5) << endl;
 }
 
