@@ -1,3 +1,5 @@
+// example from http://stackoverflow.com/a/145649/1707931
+
 #include <iostream>
 class Foo{
     public:

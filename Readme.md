@@ -11,6 +11,17 @@ python setup.py install
 miniextension_test
 ```
 
+### ctypes
+There is plenty of praise for using ctypes to wrap C code for Python.
+For instance:
+
+* http://stackoverflow.com/a/135966/1707931
+* http://stackoverflow.com/a/145649/1707931
+
+The main disadvantage I see is that it doesn't integrate well with setuptools.
+This question appears to be symptomatic: http://stackoverflow.com/q/4529555/1707931
+
+
 ###Windows
 I'm using Anaconda on Windows. Install mingw into an environment of your choice.
 Then install mingw and compile with this compiler specifically

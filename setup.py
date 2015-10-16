@@ -10,7 +10,7 @@ setup(
     # install_requires=[''],
     classifiers=['Development Status :: 3 - Alpha'],
     ext_modules=[
-        # Extension('py_ctypes_foo_module', ['py_ctypes_foo/foo.cpp']),
+        # Extension('ctypes_foo_module', ['mylib/py_ctypes_foo/foo.cpp']),
         Extension('cos_module', ['mylib/py_c_interface_cos/cos_module.c']),
         Extension('_cswig_cos', ['mylib/cswig_cos/cos_wrap.c', 'mylib/cswig_cos/cos.c']),
         Extension('_fact', ['mylib/cppswig_factorial/factorial_wrap.cxx',
