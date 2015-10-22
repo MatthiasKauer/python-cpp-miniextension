@@ -19,7 +19,7 @@ setup(
         Extension('_mystack', ['mylib/cppswig_stack/mystack.cpp', 'mylib/cppswig_stack/mystack_wrap.cxx']),
         # Boost linking: https://www.quora.com/How-do-you-distribute-Boost.Python-modules
         Extension('_stat_printer', ['mylib/myboost/stat_printer_wrap.cxx'],
-                include_dirs=['C:/Libraries/boost_1_59_0'])
+                include_dirs=['C:/Libraries/boost_1_59_0'], extra_compile_args=['/EHsc'])
      ],
     packages = packages,
     entry_points={'console_scripts': ['miniextension_test=mylib.script.miniextension_test:main']}
