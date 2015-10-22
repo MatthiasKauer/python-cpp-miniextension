@@ -3,8 +3,9 @@ using boost::math::binomial;
 
 class stat_printer {
  public:
-     stat_printer() : flips(10),
+     stat_printer() : 
         success_fraction(0.5),
+        flips(10),
         flip(flips, success_fraction)
     {}
 
